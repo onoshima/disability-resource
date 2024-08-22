@@ -1,0 +1,11 @@
+/*-- scss:rules --*/
+.sidebar-item-container {
+    // サイドメニューが2行になったときに気持ち悪いので
+    // ただし2桁番号には対応せず
+    padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+.sidebar-item-text {
+    // つまっていて気持ち悪かったので
+    line-height: 1.3em;
+}

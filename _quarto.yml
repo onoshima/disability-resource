@@ -1,0 +1,53 @@
+project:
+  type: book
+
+book:
+  title: "障害者教育総論 資料"
+  author: "小野島 昂洋"
+  date: "8/5/2024"
+  chapters:
+    - index.qmd
+    - inclusive.qmd
+    - history.qmd
+    - collaboration.qmd
+    - visual.qmd
+    - hearing.qmd
+    - physical.qmd
+    - intellectual.qmd
+    - health-impairment.qmd
+    - sld.qmd
+    - adhd.qmd
+    - asd.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: 障害者教育総論.json
+csl: jpa2022.csl
+
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    header-includes: |
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+    mainfont: "BIZ UDPGothic"
+    linestretch: 1.75
+  pdf:
+    documentclass: ltjsbook
+    pdf-engine: lualatex
+
+wrap: preserve
+
+filters:
+  #- pandoc-crossref  # citeprocよりも先に実行する必要がある
+  #- type: citeproc
+  - filters/remove-unnecessary-spaces.lua
+  - filters/figure-side-by-side.lua
+  - filters/latex-custom-figure.lua
+
+
+
